@@ -1,0 +1,165 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+li, a, button{
+     text-decoration: none;
+     list-style-type: none;
+     color: black;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header{
+     background-image: url(https://pbs.twimg.com/media/FLSAh1LXoAE-EBs?format=jpg&name=large);
+     background-size: cover;
+     background-position-y: top;
+     height: 800px;
+   
+}
+
+.nav-bar{
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     padding: 1rem 1.5rem;
+}
+   
+.nav-menu{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+   
+.nav-item{
+     margin-left: 3rem;
+}
+   
+.nav-link{
+     font-size: 1.5rem;
+     font-weight: 400;
+     color: black;
+}
+
+.hamburger {
+     display: none;
+}
+   
+.bar {
+     display: block;
+     width: 25px;
+     height: 3px;
+     margin: 5px auto;
+     -webkit-transition: all 0.3s ease-in-out;
+     transition: all 0.3s ease-in-out;
+     background-color: #101010;
+}
+
+header > h1, form, .social{
+     display: flex;
+     justify-content: flex-start;
+     margin-top: 5%;
+     margin-left: 50%;
+     margin-right: 10%;
+}
+
+header > h1{
+     font-size: 60px;
+}
+
+
+header > form > select{
+     background-color: orange;
+     color: white;
+     padding: 1rem 2rem;
+}
+
+header > .social{
+     justify-content: space-around;
+
+}
+
+input{
+     border: 1px solid grey;
+     padding: 1rem 10rem 1rem 3rem;
+     display: block;
+     width: 100%;
+     outline: 0;
+}
+
+.form-input{
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+}
+
+.icon{
+     position: absolute;
+     left: 15px;
+     top: 0;
+     color: grey;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media only screen and (max-width: 800px){
+     .nav-menu{
+          position: fixed;
+          left: -100%;
+          top: 5rem;
+          flex-direction: column;
+          background-color: #fff;
+          width: 100%;
+          border-radius: 10px;
+          text-align: center;
+          transition: 0.3s;
+          box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+     }
+   
+     .nav-menu.active{
+          left: 0;
+     }
+   
+     .nav-button{
+          display: none;
+     }
+   
+     .hamburger {
+          display: block;
+          cursor: pointer;
+     }
+     
+   } 
